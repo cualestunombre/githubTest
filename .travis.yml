@@ -17,7 +17,7 @@ after_success:
 
 before_deploy:
   - echo "Start Creating a production image with Dockerfile"
-  - docker build -t 1dilumn0/docker-react -f Dockerfile .
+  - docker build -t 1dilumn0/docker-react .
 
 deploy:
   provider: elasticbeanstalk
