@@ -1,0 +1,12 @@
+version: "3"
+services:
+  react:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "80:80"
+    stdin_open: true
+ 
+
+
