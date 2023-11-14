@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "start Creating an iamge with dockerfile"
-  - docker build -t 1dilumn0/docker-react-test -f dockerfile.dev .
+  - docker build -t 1dilumn0/docker-react-test -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true 1dilumn0/docker-react-test npm run test -- -coverage
@@ -15,9 +15,6 @@ script:
 after_success:
   - echo "Test Success"
 
-before_deploy:
-  - echo "Start Creating a production image with dockerfile"
-  - docker build -t 1dilumn0/docker-react .
 
 deploy:
   provider: elasticbeanstalk
